@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打印图形</title>
+</head>
+
+<body>
+    <script>
+        // 219970238向杨
+        // 打印三角形
+        var sanHang = prompt("请输入三角形行数")
+        for (var i = 0; i <= sanHang; i++) {
+            for (var j = 1; j <= sanHang - i; j++) {
+                document.write("&ensp;");//空格
+            }
+            for (var n = 1; n <= i; n++) {
+                document.write("*");
+                document.write("&ensp;");
+            }
+            document.write("<br>");//换行
+        }
+
+        //平行四边形
+        var siHang = prompt("请输入四边形行数")
+        for (var i = 1; i <= siHang; i++) {
+            for (var j = 1; j <= siHang - i; j++) {
+                document.write("&ensp;");
+            }
+            for (var n = 1; n <= siHang; n++) {
+                document.write("*");
+                document.write("&ensp;");
+            }
+            document.write("<br>");
+        }
+
+
+        // 菱形
+        //    前三排
+        var lingHang = Number(prompt("请输入菱形行数"));
+        for (var i = 0; i < (lingHang + 1) / 2; i++) {
+            for (var j = (lingHang - 1) / 2; j > i; j--) {
+                document.writeln("&ensp;");
+            }
+            for (var k = 0; k < 2 * i + 1; k++) {
+                document.writeln("*");
+            }
+            document.writeln("</br>");
+        }
+        //  后两排
+        for (var i = (lingHang - 1) / 2; i > 0; i--) {
+            for (var j = (lingHang - 1) / 2; j >= i; j--) {
+                debugger;
+                document.writeln("&ensp;");
+            }
+            for (var k = 0; k < 2 * i - 1; k++) {
+                document.writeln("*");
+            }
+            document.writeln("</br>")
+        }
+
+
+
+    </script>
+</body>
+
+</html>
